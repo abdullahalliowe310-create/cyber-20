@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetQuiz - Computer Networking</title>
+    <link rel="stylesheet" href="styles/css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">N</div>
+                <div>
+                    <h2>NETQUIZ</h2>
+                    <p>Learning & Assessment Platform</p>
+                </div>
+            </div>
+
+            <span class="level">BEGINNER LEVEL</span>
+        </header>
+
+        <!-- INTRODUCTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="tag">YOUR LEARNING JOURNEY</span>
+                <h1>Computer Networking<br><span>Assessment</span></h1>
+                <p>
+                    Test your knowledge of computer networking
+                    fundamentals with these 20 carefully selected questions.
+                </p>
+
+                <div class="stats">
+                    <div class="stat">
+                        <h2>20</h2>
+                        <p>Questions</p>
+                    </div>
+
+                    <div class="stat">
+                        <h2>20</h2>
+                        <p>Minutes</p>
+                    </div>
+
+                    <div class="stat">
+                        <h2>20</h2>
+                        <p>Total Marks</p>
+                    </div>
+                </div>
+
+                <button class="start-btn" id="startBtn">
+                    Start Examination →
+                </button>
+            </div>
+        </section>
+
+        <!-- QUIZ SECTION -->
+        <section class="quiz-section hidden" id="quizSection">
+
+            <div class="quiz-header">
+                <div>
+                    <h2>Examination</h2>
+                    <p>Computer Networking Fundamentals</p>
+                </div>
+
+                <div class="timer">
+                    <span>TIME LEFT</span>
+                    <h2 id="timer">20:00</h2>
+                </div>
+            </div>
+
+            <!-- PROGRESS -->
+            <div class="progress-info">
+                <span id="progressText">Question 1 of 20</span>
+                <span id="answeredText">0/20 Answered</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+            <!-- QUESTION -->
+            <div class="question-box">
+
+                <div class="question-number" id="questionNumber">
+                    QUESTION 01
+                </div>
+
+                <h2 id="questionText"></h2>
+
+                <div class="options" id="optionsContainer"></div>
+
+            </div>
+
+            <!-- NAVIGATION -->
+            <div class="navigation">
+                <button id="prevBtn" class="nav-btn secondary">
+                    ← Previous
+                </button>
+
+                <button id="nextBtn" class="nav-btn">
+                    Next Question →
+                </button>
+            </div>
+
+            <!-- QUESTION NUMBERS -->
+            <div class="navigator">
+                <h3>Question Navigator</h3>
+                <p>Click a number to move to that question.</p>
+
+                <div class="question-grid" id="questionGrid"></div>
+
+                <div class="legend">
+                    <span><i class="current-dot"></i> Current</span>
+                    <span><i class="answered-dot"></i> Answered</span>
+                    <span><i class="empty-dot"></i> Unanswered</span>
+                </div>
+            </div>
+
+            <button class="submit-btn" id="submitBtn">
+                Submit Examination
+            </button>
+
+        </section>
+
+        <!-- RESULT SECTION -->
+        <section class="result-section hidden" id="resultSection">
+
+            <div class="result-icon">🏆</div>
+
+            <span class="tag">EXAMINATION COMPLETED</span>
+
+            <h1>Your Results Are Ready!</h1>
+
+            <div class="score-circle">
+                <h2 id="score">0/20</h2>
+                <p>YOUR SCORE</p>
+            </div>
+
+            <h2 id="resultMessage"></h2>
+
+            <div class="result-stats">
+                <div class="correct">
+                    <h2 id="correctAnswers">0</h2>
+                    <p>Correct Answers</p>
+                </div>
+
+                <div class="wrong">
+                    <h2 id="wrongAnswers">0</h2>
+                    <p>Wrong Answers</p>
+                </div>
+
+                <div class="percentage">
+                    <h2 id="percentage">0%</h2>
+                    <p>Percentage</p>
+                </div>
+            </div>
+
+            <button class="start-btn" id="reviewBtn">
+                Review My Answers
+            </button>
+
+            <button class="restart-btn" id="restartBtn">
+                Retake Examination
+            </button>
+
+            <div id="reviewContainer" class="review-container hidden">
+                <h2>Answer Review</h2>
+                <div id="reviewList"></div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>© 2026 NETQUIZ | Computer Networking Assessment</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
